@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YT_Player", "YT_Player.csproj", "{8D41DA1D-9E0C-4E1B-9B5B-B6808852A65A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YT_PlayerLibrary", "..\YT_PlayerLibrary\YT_PlayerLibrary.csproj", "{6DD853CB-1795-45FF-AD15-C968F114112A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8D41DA1D-9E0C-4E1B-9B5B-B6808852A65A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D41DA1D-9E0C-4E1B-9B5B-B6808852A65A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D41DA1D-9E0C-4E1B-9B5B-B6808852A65A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D41DA1D-9E0C-4E1B-9B5B-B6808852A65A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD853CB-1795-45FF-AD15-C968F114112A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD853CB-1795-45FF-AD15-C968F114112A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD853CB-1795-45FF-AD15-C968F114112A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD853CB-1795-45FF-AD15-C968F114112A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2926C8F5-A018-4E83-8E44-22E5E8AF2220}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,6 @@
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YT_PlayerLibrary\bin\Debug\YT_PlayerLibrary.dll
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YT_PlayerLibrary\bin\Debug\YT_PlayerLibrary.pdb
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YT_PlayerLibrary\obj\Debug\YT_PlayerLibrary.csproj.AssemblyReference.cache
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YT_PlayerLibrary\obj\Debug\YT_PlayerLibrary.csproj.CoreCompileInputs.cache
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YT_PlayerLibrary\obj\Debug\YT_PlayerLibrary.dll
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YT_PlayerLibrary\obj\Debug\YT_PlayerLibrary.pdb

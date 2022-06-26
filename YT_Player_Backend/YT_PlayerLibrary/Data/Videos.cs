@@ -7,14 +7,13 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;  // SqlConnection
 using System.Data; // dataset 
 
+
+// buiten grbuik 
 namespace YT_PlayerLibrary.Data
 {
     public static class Videos
-    {
-
-       
-
-        public static DataView LoadDataBase()
+    {  
+        public static DataTable LoadDataBase()
         {
             string connstring = @"Integrated Security = SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
 
@@ -31,7 +30,7 @@ namespace YT_PlayerLibrary.Data
             
 
             conn.Close();
-            return dv;
+            return dt;
         }
     }
 }

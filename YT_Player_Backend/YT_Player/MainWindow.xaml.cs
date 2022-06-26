@@ -30,7 +30,7 @@ namespace YT_Player
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DataView dt = Videos.LoadDataBase();
+            //DataView dt = Videos.LoadDataBase();
         }
     }
 }

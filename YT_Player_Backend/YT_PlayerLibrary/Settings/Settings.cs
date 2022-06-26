@@ -11,7 +11,7 @@ namespace YT_PlayerLibrary.Settings
         public static class Database
         {
 
-            private static string projConnString = @"Integrated Security = SSPI;Initial Catalog = dbYT_Player;Data Source = LAPTOP - RGAE8HJ8\\MYSQLEXPRESS";
+            private static string projConnString = @"Integrated Security= SSPI;Initial Catalog = dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
             public static string ProjectConnectionstring => projConnString;
 
 

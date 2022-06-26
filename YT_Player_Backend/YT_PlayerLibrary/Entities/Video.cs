@@ -13,8 +13,5 @@ namespace YT_PlayerLibrary.Entities
         public string Src { get; set; }
         public int StartAtSec { get; set; }
 
-
-
-
    }
 }

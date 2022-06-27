@@ -54,9 +54,7 @@ function btn_click(id){
 }
 
 
-
-
-// fech
+// fetch
 function fetchJSON() {
     fetch(apiUrl) // (1) (2)
         .then(validateResponse) // (3)

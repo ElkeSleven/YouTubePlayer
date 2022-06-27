@@ -1,0 +1,51 @@
+﻿<Window x:Class="Wpf_YouTubePlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_YouTubePlayer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Afsuiten" Click="MenuItem_Click_Afsuiten"></MenuItem>
+        </Menu>
+
+
+        <DockPanel DockPanel.Dock="Bottom" Margin="10 0"  >
+            <Label Name="lbldayTime"  />
+            <Label Content="YouTube_Player - by Elke" DockPanel.Dock="Right"  FontWeight="DemiBold" FontSize="13" />
+            <Label Content="HoofdMenu" FontWeight="DemiBold" FontSize="15" HorizontalAlignment="Center" />
+        </DockPanel>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Button Name="viewAllData" Click="viewAllData_Click"> View Data</Button>
+            <Button Grid.Column="1" Name="addData" Click="addData_Click"> Add Data</Button>
+
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+    </DockPanel>
+</Window>

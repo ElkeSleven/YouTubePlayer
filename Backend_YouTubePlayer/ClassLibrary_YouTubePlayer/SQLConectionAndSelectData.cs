@@ -11,7 +11,7 @@ namespace ClassLibrary_YouTubePlayer
 {
     public static class SQLConectionAndSelectData
     {
-        public static DataView LoadDataBase()
+        public static DataView LoadDataBaseGetDefaultView()
         {
             string connstring = @"Integrated Security = SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
 
@@ -47,6 +47,50 @@ namespace ClassLibrary_YouTubePlayer
 
             conn.Close();
             return dt;
+        }
+        public static string insertWithStartTime(string title, string src, string startAtSec)
+        {
+            string mess = "";
+            string connstring = @"Integrated Security = SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
+            // insert into YoutubeSongs (title, src, startAtSec) values ('Green Day - Basket Case','NUTGr5t3MoY', 15)
+
+            SqlConnection conn = new SqlConnection(connstring);
+            string query = $"insert into YoutubeSongs (title, src, startAtSec) values ('{title}', '{src}', '{startAtSec}' )";
+            //string query = $"insert into YoutubeSongs (title, src, startAtSec) values (@title, @src , @startAtSec )";
+            try
+            {
+                SqlCommand sql = new SqlCommand(query, conn);
+                conn.Open();
+                sql.ExecuteNonQuery();
+                mess = "geluckt";
+                
+            }
+            catch
+            {
+                mess =  "is niet geluckt";
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return mess;
+
+            /*          
+                      using (SqlCommand insertCommand = new SqlCommand(query.ToString()))
+                      {
+                          insertCommand.Parameters.Add("@title", SqlDbType.VarChar).Value = title;
+                          insertCommand.Parameters.Add("@src", SqlDbType.VarChar).Value = src;
+                          insertCommand.Parameters.Add("@startAtSec", SqlDbType.VarChar).Value = startAtSec;
+
+
+                          SqlCommand sql = new SqlCommand(insertCommand.ToString(), conn);
+                          conn.Open();
+                          sql.ExecuteNonQuery();
+                          conn.Close();
+                      }*/
+
+
         }
 
 

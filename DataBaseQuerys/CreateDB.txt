@@ -1,0 +1,28 @@
+﻿
+--?t=60
+// dit is de database die word gebruikt 
+
+create database dbYT_Player
+
+use dbYT_Player
+
+create table YoutubeSongs(
+id int primary key IDENTITY(1,1),
+title varchar(255) not null,
+src varchar(255) not null unique,
+startAtSec int null 
+);
+
+select * from YoutubeSongs
+
+
+// dit een paar waarde die ik heb toegevoeg     : voeg je eigen video's toe 
+
+insert into YoutubeSongs (title, src) values ('Red Hot Chili Peppers - Can''t Stop','8DyziWtkfBw')
+insert into YoutubeSongs (title, src) values ('Bakermat - Learn to Lose ft. Alex Clare','GNjStWG2vLU')
+insert into YoutubeSongs (title, src, startAtSec) values ('Eminem - Godzilla ft. Juice WRLD','r_0JjYUe5jo', 4)
+insert into YoutubeSongs (title, src, startAtSec) values ('Green Day - Basket Case','NUTGr5t3MoY', 15)
+
+
+select * from YoutubeSongs
+

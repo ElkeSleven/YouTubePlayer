@@ -1,0 +1,75 @@
+﻿<Window x:Class="Wpf_YouTubePlayer.wpfAddData"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_YouTubePlayer"
+        mc:Ignorable="d"
+        Title="wpfAddData" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Width" Value="200"></Setter>
+        </Style>
+    </Window.Resources>
+    
+    
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Hoofdmenu">
+                <MenuItem Header="ViewData" Click="MenuItem_Click_ViewData"></MenuItem>
+
+            </MenuItem>
+            <MenuItem Header="Afsuiten" Click="MenuItem_Click_Afsuiten"></MenuItem>
+        </Menu>
+
+
+        <DockPanel DockPanel.Dock="Bottom" Margin="10 0"  >
+            <Label Name="lbldayTime"  />
+            <Label Content="YouTube_Player - by Elke" DockPanel.Dock="Right"  FontWeight="DemiBold" FontSize="13" />
+            <Label Content="View All Data" FontWeight="DemiBold" FontSize="15" HorizontalAlignment="Center" />
+        </DockPanel>
+
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Label VerticalContentAlignment="Center" FontSize="20" HorizontalContentAlignment="Center">voeg hier de gevevens van de video in :</Label>
+            
+            <WrapPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+               
+                <Label>Title :</Label>
+                <TextBox x:Name="txtTitle"></TextBox>
+                <Label>src :</Label>
+                <TextBox x:Name="txtSrc"></TextBox>
+                <Label>start en sec :</Label>
+                <TextBox x:Name="txtStartAtSec"></TextBox>
+
+            </WrapPanel>
+            <Button Grid.Row="6" Click="AddRow_Click">GO</Button>
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+    </DockPanel>
+</Window>

@@ -1,0 +1,23 @@
+
+
+#app section{
+    display: flex;
+}
+
+#frameBox iframe{
+    width: 420px;
+    height: 315px;
+}
+
+.videoRow button{
+    background: none;
+    border: none;
+}
+.videoRow{
+    background: none;
+    border: 2px solid lightgrey;
+
+}
+.videoRow+.videoRow{
+   border-top: none;
+}

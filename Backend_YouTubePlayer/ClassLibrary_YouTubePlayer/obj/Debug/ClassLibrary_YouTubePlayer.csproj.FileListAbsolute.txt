@@ -1,0 +1,6 @@
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YouTubePlayer\Backend_YouTubePlayer\ClassLibrary_YouTubePlayer\bin\Debug\ClassLibrary_YouTubePlayer.dll
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YouTubePlayer\Backend_YouTubePlayer\ClassLibrary_YouTubePlayer\bin\Debug\ClassLibrary_YouTubePlayer.pdb
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YouTubePlayer\Backend_YouTubePlayer\ClassLibrary_YouTubePlayer\obj\Debug\ClassLibrary_YouTubePlayer.csproj.AssemblyReference.cache
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YouTubePlayer\Backend_YouTubePlayer\ClassLibrary_YouTubePlayer\obj\Debug\ClassLibrary_YouTubePlayer.csproj.CoreCompileInputs.cache
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YouTubePlayer\Backend_YouTubePlayer\ClassLibrary_YouTubePlayer\obj\Debug\ClassLibrary_YouTubePlayer.dll
+C:\Users\elkes\OneDrive\Documents\GitHub\YouTubePlayer\YouTubePlayer\Backend_YouTubePlayer\ClassLibrary_YouTubePlayer\obj\Debug\ClassLibrary_YouTubePlayer.pdb

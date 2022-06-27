@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-using System.Data.SqlClient; // SqlCommands
 using System.Data; //
-using YT_PlayerLibrary.Settings;
+using System.Data.SqlClient;
 
 namespace YT_PlayerLibrary.Data.Framework
 {
@@ -16,7 +11,7 @@ namespace YT_PlayerLibrary.Data.Framework
         public SqlCommands(string tableName)
         {
             TableName = tableName;                                                              // tabelnaam                                                                                 // SuptableName = suptableName;                                                              // tabelnaam
-            sqlConn = new SqlConnection(@"Integrated Security=SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS");     // conectionstring 
+            sqlConn = new SqlConnection(Settings.Settings.Database.ProjectConnectionstring);     // conectionstring 
 
         }
         protected BaseResult BaseResult { get; set; }

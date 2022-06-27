@@ -9,7 +9,6 @@ using YT_PlayerLibrary.Data; //
 using YT_PlayerLibrary.Data.Framework; //
 using YT_PlayerLibrary.Entities; //
 using System.Data.SqlClient;
-
 namespace YT_PlayerLibrary.Business
 {
     public static class MusicVideos

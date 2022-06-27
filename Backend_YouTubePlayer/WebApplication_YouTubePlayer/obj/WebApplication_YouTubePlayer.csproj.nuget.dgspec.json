@@ -1,0 +1,102 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\WebApplication_YouTubePlayer\\WebApplication_YouTubePlayer.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\ClassLibrary_YouTubePlayer\\ClassLibrary_YouTubePlayer.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\ClassLibrary_YouTubePlayer\\ClassLibrary_YouTubePlayer.csproj",
+        "projectName": "ClassLibrary_YouTubePlayer",
+        "projectPath": "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\ClassLibrary_YouTubePlayer\\ClassLibrary_YouTubePlayer.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\WebApplication_YouTubePlayer\\WebApplication_YouTubePlayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\WebApplication_YouTubePlayer\\WebApplication_YouTubePlayer.csproj",
+        "projectName": "WebApplication_YouTubePlayer",
+        "projectPath": "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\WebApplication_YouTubePlayer\\WebApplication_YouTubePlayer.csproj",
+        "packagesPath": "C:\\Users\\elkes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\WebApplication_YouTubePlayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\elkes\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\ClassLibrary_YouTubePlayer\\ClassLibrary_YouTubePlayer.csproj": {
+                "projectPath": "C:\\Users\\elkes\\OneDrive\\Documents\\GitHub\\YouTubePlayer\\YouTubePlayer\\Backend_YouTubePlayer\\ClassLibrary_YouTubePlayer\\ClassLibrary_YouTubePlayer.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Cors": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

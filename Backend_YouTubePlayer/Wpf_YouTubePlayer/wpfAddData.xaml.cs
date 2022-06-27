@@ -30,10 +30,31 @@ namespace Wpf_YouTubePlayer
             string title = txtTitle.Text;
             string src = txtSrc.Text;
             string startAtSec = txtStartAtSec.Text;
+            string mess = "";
+            if (!string.IsNullOrWhiteSpace(title) && !string.IsNullOrWhiteSpace(src))
+            {
+                if (!string.IsNullOrWhiteSpace(startAtSec))
+                {
+                    mess = SQLConectionAndSelectData.insertData(title, src, startAtSec);
 
-            string mess = SQLConectionAndSelectData.insertWithStartTime(title, src, startAtSec);
+                }
+                else
+                {
+                    mess = SQLConectionAndSelectData.insertData(title, src);
 
-            MessageBox.Show(mess);
+                }
+
+
+                MessageBox.Show(mess);
+
+
+
+
+
+            }
+                
+
+    
         }
 
         private void MenuItem_Click_Afsuiten(object sender, RoutedEventArgs e)

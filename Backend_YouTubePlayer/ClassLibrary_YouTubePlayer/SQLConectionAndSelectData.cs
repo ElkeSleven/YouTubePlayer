@@ -30,7 +30,7 @@ namespace ClassLibrary_YouTubePlayer
             conn.Close();
             return dv;
         }
-        public static DataTable LoadDataBase2()
+        public static DataTable LoadDataBase()
         {
             string connstring = @"Integrated Security = SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
 
@@ -48,7 +48,7 @@ namespace ClassLibrary_YouTubePlayer
             conn.Close();
             return dt;
         }
-        public static string insertWithStartTime(string title, string src, string startAtSec)
+        public static string insertData(string title, string src, string startAtSec)
         {
             string mess = "";
             string connstring = @"Integrated Security = SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
@@ -68,6 +68,103 @@ namespace ClassLibrary_YouTubePlayer
             catch
             {
                 mess =  "is niet geluckt";
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return mess;
+
+            /*          
+                      using (SqlCommand insertCommand = new SqlCommand(query.ToString()))
+                      {
+                          insertCommand.Parameters.Add("@title", SqlDbType.VarChar).Value = title;
+                          insertCommand.Parameters.Add("@src", SqlDbType.VarChar).Value = src;
+                          insertCommand.Parameters.Add("@startAtSec", SqlDbType.VarChar).Value = startAtSec;
+
+
+                          SqlCommand sql = new SqlCommand(insertCommand.ToString(), conn);
+                          conn.Open();
+                          sql.ExecuteNonQuery();
+                          conn.Close();
+                      }*/
+
+
+        }
+        public static string insertData(string title, string src)
+        {
+            string mess = "";
+            string connstring = @"Integrated Security = SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
+            // insert into YoutubeSongs (title, src, startAtSec) values ('Green Day - Basket Case','NUTGr5t3MoY', 15)
+
+            SqlConnection conn = new SqlConnection(connstring);
+            string query = $"insert into YoutubeSongs (title, src, startAtSec) values ('{title}', '{src}' )";
+            //string query = $"insert into YoutubeSongs (title, src, startAtSec) values (@title, @src , @startAtSec )";
+            try
+            {
+                SqlCommand sql = new SqlCommand(query, conn);
+                conn.Open();
+                sql.ExecuteNonQuery();
+                mess = "geluckt";
+
+            }
+            catch
+            {
+                mess = "is niet geluckt";
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return mess;
+
+            /*          
+                      using (SqlCommand insertCommand = new SqlCommand(query.ToString()))
+                      {
+                          insertCommand.Parameters.Add("@title", SqlDbType.VarChar).Value = title;
+                          insertCommand.Parameters.Add("@src", SqlDbType.VarChar).Value = src;
+                          insertCommand.Parameters.Add("@startAtSec", SqlDbType.VarChar).Value = startAtSec;
+
+
+                          SqlCommand sql = new SqlCommand(insertCommand.ToString(), conn);
+                          conn.Open();
+                          sql.ExecuteNonQuery();
+                          conn.Close();
+                      }*/
+
+
+        }
+        public static string insertData(Video v)
+        {
+            string mess = "";
+            string query = "";
+            string connstring = @"Integrated Security = SSPI;Initial Catalog=dbYT_Player;Data Source=LAPTOP-RGAE8HJ8\MYSQLEXPRESS";
+            // insert into YoutubeSongs (title, src, startAtSec) values ('Green Day - Basket Case','NUTGr5t3MoY', 15)
+
+            SqlConnection conn = new SqlConnection(connstring);
+            if(v.startAtSec != null)
+            { 
+                 query = $"insert into YoutubeSongs (title, src, startAtSec) values ('{v.title}', '{v.src}', {v.startAtSec} )";
+            }
+            else
+            {
+                query = $"insert into YoutubeSongs (title, src) values ('{v.title}', '{v.src}')";
+
+            }
+            //string query = $"insert into YoutubeSongs (title, src, startAtSec) values (@title, @src , @startAtSec )";
+            try
+            {
+                SqlCommand sql = new SqlCommand(query, conn);
+                conn.Open();
+                sql.ExecuteNonQuery();
+                mess = "succes";
+
+            }
+            catch (System.Exception ex)
+            {
+                mess = ex.Message;
             }
             finally
             {

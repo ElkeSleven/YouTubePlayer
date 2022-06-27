@@ -14,13 +14,21 @@ namespace WebApplication_YouTubePlayer.Controllers
     public class ValuesController : ControllerBase
     {
         [HttpGet]
-        public ActionResult GetStudents()
+        public ActionResult GetData()
         {
             string jsonResult;
-            var dt = SQLConectionAndSelectData.LoadDataBase2(); 
+            var dt = SQLConectionAndSelectData.LoadDataBase(); 
             jsonResult = JsonConvert.SerializeObject(dt);
             return Ok(jsonResult);
         }
-
+        [HttpPost]
+        public ActionResult AddData(Video video)
+        {
+            string jsonResult;
+            string mess = SQLConectionAndSelectData.insertData(video);
+            var dt = SQLConectionAndSelectData.LoadDataBase();
+            jsonResult = JsonConvert.SerializeObject(dt);
+            return Ok(jsonResult);
+        }
     }
 }

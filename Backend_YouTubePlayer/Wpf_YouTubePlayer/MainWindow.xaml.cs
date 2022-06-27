@@ -23,7 +23,7 @@ namespace Wpf_YouTubePlayer
         public MainWindow()
         {
             InitializeComponent();
-            mePlayer.Play();
+          
         }
 
         private void viewAllData_Click(object sender, RoutedEventArgs e)

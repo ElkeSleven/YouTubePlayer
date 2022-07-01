@@ -1,0 +1,35 @@
+body{
+    background-color: lightgrey;
+    display: flex;
+    gap: 1rem;
+}
+
+.fill{
+    background-color: #b962e5;
+    aspect-ratio: 1;
+    width: 150px;
+    cursor: grabbing;
+}
+
+.empty{
+    background-color: white;
+    aspect-ratio: 1;
+    width: 160px;
+    display: grid; place-content: center;
+    border: solid 2px black;
+}
+
+.empty:hover{
+    border: dotted 2px black;
+}
+
+.hold{
+    border: solid blue 3px;
+}
+.hovered{
+    background-color: yellow;
+    border: yellow 3px solid;
+}
+.Red{
+    background-color: firebrick;
+}

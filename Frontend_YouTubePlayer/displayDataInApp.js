@@ -5,13 +5,33 @@ let dataYouTubePlayer = [];
 const app = document.getElementById('app')
 let appIndex = ``;
 let playListIndex = ``;
+let isDemo = false;
+const demoData = [
+ {id: 1, title: 'Lizzo - Good As Hell', src: 'SmbmeOgWsqE', startAtSec: 0}
+,{id: 2, title: 'Chuck Berry - Johnny B Goode', src: 'T38v3-SSGcM', startAtSec: 0}
+,{id: 3, title: 'The Offspring - The Kids Arent Alright', src: '7iNbnineUCI', startAtSec: null}
+,{id: 4, title: 'Bakermat - Learn to Lose ft. Alex Clare', src: 'GNjStWG2vLU', startAtSec: null}
+,{id: 5, title: "Red Hot Chili Peppers - Can't Stop", src: '8DyziWtkfBw', startAtSec: null}
+,{id: 6, title: 'Tracy Chapman - Fast Car', src: 'AIOAlaACuv4', startAtSec: null}
+,{id: 7, title: 'Lou Bega - Mambo No. 5', src: 'EK_LN3XEcnw', startAtSec: 4}
+,{id: 8, title: 'TASH SULTANA - JUNGLE', src: 'Vn8phH0k5HI', startAtSec: null}
+,{id: 9, title: 'Green Day - Basket Case', src: 'NUTGr5t3MoY', startAtSec: 15}
+,{id: 10, title: 'Eminem - Godzilla ft. Juice WRLD', src: 'r_0JjYUe5jo', startAtSec: 4}]
+
 
 window.onload = function(){
-    createApp()
-    fetchJSON()
+    //createApp()
+    //fetchJSON()
+    runDemo_Click()
 
 }
-
+function runDemo_Click(){
+    alert('je gaat nu een demo zien')
+    isDemo = true;
+    createApp()
+    dataYouTubePlayer = demoData
+    dispalyDataInApp()
+}
 function createApp(){
     appIndex =
         `
@@ -21,13 +41,6 @@ function createApp(){
    </section>
     <section>
     <div id="addData"> 
-    <label>title: </label>
-    <input name="title"> 
-     <label>videoCode:</label>
-    <input name="src" > 
-     <label>start tijd(optie)(in sec): </label>
-    <input name="startAtSec"> 
-    <button onclick="addData_Click()">Toevoegen</button>
     </div>
     </section>
     
@@ -69,8 +82,23 @@ function dispalyDataInApp(){
 
     document.getElementById('playListBox').innerHTML = playListIndex
     playListRow_click(dataYouTubePlayer[0].id)
+    createAddDataIndex()
+}
+function createAddDataIndex(){
+    document.getElementById('addData').innerHTML =
+        `
+            <label>title: </label>
+    <input name="title"> 
+     <label>videoCode:</label>
+    <input name="src" > 
+     <label>start tijd(optie)(in sec): </label>
+    <input name="startAtSec"> 
+    <button onclick="addData_Click()">Toevoegen</button>
+        `
+
 }
 function playListRow_click(id){
+    console.log(dataYouTubePlayer)
     let video = dataYouTubePlayer.find(video => {
         return video.id === id
     })
@@ -89,11 +117,17 @@ function logResult(result) {
 function addData_Click(){
     if(document.getElementsByName('title')[0].value !== '' && document.getElementsByName('src')[0].value !== '' ){
         if(!document.getElementsByName('title')[0].value.includes("'")){
-            DataToevoegen({
-                title: document.getElementsByName('title')[0].value,
-                src: document.getElementsByName('src')[0].value,
-                startAtSec: document.getElementsByName('startAtSec')[0].value === ""? null : document.getElementsByName('startAtSec')[0].value
-            })
+            if(isDemo === false){
+                DataToevoegen({
+                    title: document.getElementsByName('title')[0].value,
+                    src: document.getElementsByName('src')[0].value,
+                    startAtSec: document.getElementsByName('startAtSec')[0].value === ""? null : document.getElementsByName('startAtSec')[0].value
+                })
+            }
+            else {
+                alert('dit is een demo dus je kan geen waarde toevoegen')
+            }
+
         }
         else {
             alert('title bevat \'' )
@@ -106,6 +140,17 @@ function addData_Click(){
 
 
 }
+
+
+// sorteer optie
+
+
+
+
+
+
+
+
 
 
 // fetch
@@ -155,6 +200,7 @@ function logError(error) {
             <p> 3. zet de WebApplication_YouTubePlayer als start project </p>
             <p> 4. start project </p>
             <p> 5. KLAAR open deze website opnieuw</p>
+            <button onclick="runDemo_Click()">klik hier om een demo te zien</button>
 </div>`
 
 
